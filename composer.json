@@ -1,0 +1,19 @@
+{
+  "name": "battron/plugin-skeleton",
+  "description": "BattronListingBoxMedia enables manufacturer logos in listing page",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "BattronListingBoxMedia\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "BattronListingBoxMedia\\BattronListingBoxMedia",
+    "label": {
+      "de-DE": "Battron Listing Box Media",
+      "en-GB": "Battron Listing Box Media"
+    }
+  }
+}

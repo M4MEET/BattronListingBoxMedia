@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-image.html.twig' %}
+
+{% block component_product_box_name %}
+    {# Your custom manufacturer logo block #}
+    {% block page_product_listing_manufacturer_logo %}
+        <div class="col-4 d-flex justify-content-end align-items-center border-end pe-3 py-2">
+            {% if product.extensions.manufacturerMedia %}
+                <img src="{{ product.extensions.manufacturerMedia.url }}" alt="Manufacturer Logo" class="img-fluid" style="height: 30px;">
+            {% endif %}
+        </div>
+    {% endblock %}
+    <div class="col-8 ps-3 py-2"> <!-- Added vertical padding py-2 -->
+        <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
+           class="product-name"
+           title="{{ name }}">
+            {{ name }}
+        </a>
+    </div>
+{% endblock %}
